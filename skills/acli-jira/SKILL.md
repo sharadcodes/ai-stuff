@@ -127,6 +127,8 @@ acli jira board search
 - `--json` — full raw JSON with all fields
 - `--fields "key,summary,status"` — limit columns (combine with `--csv`)
 
+**Important:** Users with Atlassian account type (accountType: "atlassian") may not appear in CSV assignee fields because they lack an email address. Use `--json` format or view specific issue details to see these assignees (they show via accountId and displayName).
+
 ## 10. Common JQL Reference
 
 ```bash
