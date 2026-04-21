@@ -80,9 +80,9 @@ acli jira workitem edit --jql "labels in (AI)" --assignee "user@example.com" --y
 ## Transitioning Status
 
 ```bash
-acli jira workitem transition --key "PROJ-87" --to "In Progress"
-acli jira workitem transition --key "PROJ-87" --to "Done"
-acli jira workitem transition --key "PROJ-87" --to "To Do"
+acli jira workitem transition --key "PROJ-87" --status "In Progress"
+acli jira workitem transition --key "PROJ-87" --status "Done"
+acli jira workitem transition --key "PROJ-87" --status "To Do"
 ```
 
 ## Other Operations
