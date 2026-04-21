@@ -22,7 +22,7 @@ Use this skill when asked to:
 Always start by listing available projects to get the correct project keys:
 
 ```bash
-acli jira project list --recent
+acli jira project list --paginate
 ```
 
 ## Reading All Issues
