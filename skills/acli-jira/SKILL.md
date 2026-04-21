@@ -7,6 +7,10 @@ description: Guide for managing Jira issues using the Atlassian CLI (acli). Use 
 
 Atlassian CLI (`acli`) interacts with Jira Cloud from the terminal. Authentication is already configured. Issue types available: `Epic`, `Task`, `Subtask`.
 
+## Safety Rule
+
+**NEVER use `--yes` flag to skip confirmation.** Before performing any EDIT, DELETE, or TRANSITION operation, you MUST always ask the user for explicit confirmation. Do not skip confirmation under any circumstances.
+
 ## When to use this skill
 Use this skill when asked to:
 - Search or list Jira issues, epics, or subtasks
@@ -81,8 +85,8 @@ acli jira workitem edit --key "PROJ-87" --assignee "@me"
 # Add labels
 acli jira workitem edit --key "PROJ-87" --labels "AI,urgent"
 
-# Bulk edit by JQL (--yes skips confirmation)
-acli jira workitem edit --jql "labels in (AI)" --assignee "user@example.com" --yes
+# Bulk edit by JQL (always ask for confirmation first)
+acli jira workitem edit --jql "labels in (AI)" --assignee "user@example.com"
 ```
 
 ## Transitioning Status
