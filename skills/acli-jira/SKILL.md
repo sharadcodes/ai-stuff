@@ -17,6 +17,18 @@ Use this skill when asked to:
 - Add comments to issues
 - List boards or sprints
 
+## Reading All Issues
+
+First, read all issues to understand the current state before making changes:
+
+```bash
+# List all issues in project
+acli jira workitem search --jql "project = PROJ" --fields "key,summary,status,issuetype,assignee" --csv
+
+# List all issues with pagination for large projects
+acli jira workitem search --jql "project = PROJ" --paginate --csv
+```
+
 ## Searching Issues
 Always use `--fields` with `--csv` for clean, parseable output. Use `--paginate` when results may exceed the default limit.
 
