@@ -17,6 +17,14 @@ Use this skill when asked to:
 - Add comments to issues
 - List boards or sprints
 
+## First Step: List Available Projects
+
+Always start by listing available projects to get the correct project keys:
+
+```bash
+acli jira project list --recent
+```
+
 ## Reading All Issues
 
 First, read all issues to understand the current state before making changes:
