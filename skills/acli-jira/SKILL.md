@@ -7,9 +7,17 @@ description: Guide for managing Jira issues using the Atlassian CLI (acli). Use 
 
 Atlassian CLI (`acli`) interacts with Jira Cloud from the terminal. Authentication is already configured. Issue types available: `Epic`, `Task`, `Subtask`.
 
-## Safety Rule
+## Safety Rules
 
-**NEVER use `--yes` flag to skip confirmation.** Before performing any EDIT, DELETE, or TRANSITION operation, you MUST always ask the user for explicit confirmation. Do not skip confirmation under any circumstances.
+**CRITICAL: Follow these rules strictly:**
+
+1. **NEVER use `--yes` flag** - This skips confirmation and is strictly forbidden
+2. **ALWAYS ask for confirmation** before any EDIT, DELETE, TRANSITION, or CREATE operation
+3. **READ-ONLY by default** - Only perform write operations (create/edit/transition) when explicitly requested
+4. **No bulk operations without explicit approval** - For bulk edits via JQL, always show exactly how many issues will be affected and get explicit confirmation
+5. **Use specific issue keys** - Prefer editing by specific issue keys rather than JQL queries when possible
+6. **Show what will change** - Before executing, summarize exactly what will be modified
+7. **No delete operations** - Do not perform any delete operations
 
 ## When to use this skill
 Use this skill when asked to:
