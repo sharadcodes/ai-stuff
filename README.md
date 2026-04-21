@@ -19,7 +19,7 @@ ai-stuff/
 ## 🛠️ Available Skills
 
 ### [acli-jira](skills/acli-jira/SKILL.md)
-**Jira Management with Atlassian CLI**
+**Jira Management with Atlassian CLI [check out acli](https://developer.atlassian.com/cloud/acli/guides/introduction/)**
 
 A comprehensive guide for managing Jira issues from the terminal using `acli`. Use this skill to:
 - Search and list Jira issues
